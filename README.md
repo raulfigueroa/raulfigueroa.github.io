@@ -5,4 +5,3 @@ I defended my Ph.D. thesis project entitled *"Combinatorics of analytic ideals"*
 [*curriculum vitae*](/docs/CV-RaulFigueroa.pdf), [*e-mail*](mailto:r.figueroa@uniandes.edu.co).
 
 
-## Hola Hola
