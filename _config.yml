@@ -3,7 +3,7 @@ title: --------------------------
 subtitle: Gloria Buritica
 description: gloria.buritica@sorbonne-universite.fr
 show_downloads: FALSE
-logo: /docs/foto.jpg
+logo: /docs/foto.JPG
 google_site_verification: "qO0ypQFjMAJu3kmyFYH_uAHSR7KUPr6s4WiyZeX33xQ"
 plugins:
   - jekyll-sitemap
