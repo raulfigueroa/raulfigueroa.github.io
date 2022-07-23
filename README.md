@@ -1,4 +1,4 @@
-# Gloria Buriticá
+# Raul Figueroa Sierra
 
 I defended my Ph.D. thesis entitled *"Assessing the time dependence of multivariate extremes for heavy rainfall modeling"* in May 2022 at LPSM laboratory, Sorbonne Université, under the supervision of [Philippe Naveau](https://www.lsce.ipsl.fr/Phocea/Pisp/visu.php?id=176&uid=naveau) and [Olivier Wintenberger](http://wintenberger.fr).
 
