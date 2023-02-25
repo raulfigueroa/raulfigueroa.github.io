@@ -6,4 +6,8 @@ From September to December of 2022, I was in a research stay at [Universidad Nac
 
 [*curriculum vitae*](/docs/CV-RaulFigueroa.pdf), [*e-mail*](mailto:r.figueroa@uniandes.edu.co).
 
+# Experinces
+bla
+blablabla
+
 
