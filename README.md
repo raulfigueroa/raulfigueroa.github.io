@@ -9,8 +9,7 @@ En este párrafo estoy escribiendo texto en Markdown.
 
 A continuación, incluiré una ecuación en LaTeX utilizando un bloque de código:
 
-```latex
-\[ f(x) = x^2 + 2x + 1 \]
+$f(x) = x^2 + 2x + 1$
 
 
 [*curriculum vitae*](/docs/CV-RaulFigueroa.pdf), [*e-mail*](mailto:r.figueroa@uniandes.edu.co).
