@@ -12,8 +12,8 @@ In the summer of 2023, I did a research visit at [Technische Universität Wien](
 
 # In preparation
 
-- Pseudointersections and towers for singulars. With Diana Carolina Montoya.
-- Navigating between Measure and Category Dichotomies. With Michael Hru\v{s}ák.
+- Pseudointersections and towers for singulars. With [Diana Carolina Montoya](https://dcmontoya.github.io/).
+- Navigating between Measure and Category Dichotomies. With [Michael Hrusak](https://www.matmor.unam.mx/~michael/).
 
 [*curriculum vitae*](/docs/CV-RaulFigueroa.pdf), [*e-mail*](mailto:r.figueroa@uniandes.edu.co).
 
