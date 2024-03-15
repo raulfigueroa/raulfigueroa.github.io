@@ -2,7 +2,7 @@
 
 I am a mathematician from Bogotá. I did my undergraduate studies at Universidad Nacional de Colombia. Next, I got my Master in Mathematics at Andes University in Bogotá under the direction of Professor [Xavier Caicedo](https://repositorio.uniandes.edu.co/handle/1992/44244). 
 
-Currently, I am a PhD candidate and assistant teacher of Mathematics at Andes University in Bogotá, Colombia. My research interests focus on set theory. More precisely, I am interested in _forcing, infinite combinatorics, and characteristic cardinals_.  I successfully defended my Ph.D. thesis project entitled _Combinatorics of analytic ideals_ in June 2022 at [Univerisidad de los Andes](https://uniandes.edu.co), under the supervision of [Carlos Augusto di Prisco de Venanzi](https://math.uniandes.edu.co/app/cv/site/institucional.php?Uid=ca.di&Cat=Planta&PW=). 
+Currently, I am a PhD candidate and assistant teacher of Mathematics at Andes University in Bogotá, Colombia. I successfully defended my project entitled _Combinatorics of analytic ideals_ in June 2022 at [Univerisidad de los Andes](https://uniandes.edu.co), under the supervision of [Carlos Augusto di Prisco de Venanzi](https://math.uniandes.edu.co/app/cv/site/institucional.php?Uid=ca.di&Cat=Planta&PW=). My research interests focus on set theory. More precisely, I am interested in _forcing, infinite combinatorics, and characteristic cardinals_. 
 
 From September to December of 2022, I was on a research stay at [Universidad Nacional Autónoma de México](https://www.unam.mx/) in collaboration with [Michael Hrusak](https://www.matmor.unam.mx/~michael/), where we worked on combinatorics of filters and ideals.
 
