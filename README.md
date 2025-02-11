@@ -11,7 +11,7 @@ I attended the [Young Set Theory Workshop 2023](https://www.uni-muenster.de/Math
 In the summer of 2023, I did a research visit at [Technische Universität Wien](https://www.tuwien.at/), where I was engaged in the project *Singular Cardinals and Cardinal Characteristics* joint with [Diana Carolina Montoya](https://dcmontoya.github.io/). During the visit, I also attended the [Sixth workshop on generalized Baire spaces](https://sites.google.com/view/gbs23/startseite) on July 26-28 at the Technische Universität Wien.
 
 # In preparation
-- The Category Dichotomy for Ideals. With [Alan Dow](https://webpages.charlotte.edu/adow/) [Osvaldo Guzmán](https://www.matmor.unam.mx/~oguzman/) and [Michael Hrusak](https://www.matmor.unam.mx/~michael/).
+- The Category Dichotomy for Ideals. With [Alan Dow](https://webpages.charlotte.edu/adow/), [Osvaldo Guzmán](https://www.matmor.unam.mx/~oguzman/) and [Michael Hrusak](https://www.matmor.unam.mx/~michael/).
 - The Measure Dichotomy for $F_\sigma$ ideals. With [Michael Hrusak](https://www.matmor.unam.mx/~michael/).
 - Pseudointersections and towers for singulars. With [Diana Carolina Montoya](https://dcmontoya.github.io/).
 
