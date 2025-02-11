@@ -13,7 +13,8 @@ In the summer of 2023, I did a research visit at [Technische Universität Wien](
 # In preparation
 
 - Pseudointersections and towers for singulars. With [Diana Carolina Montoya](https://dcmontoya.github.io/).
-- Category Dichotomy: weakly selective vs Cohen-indestructible. With [Osvaldo Guzmán](https://www.matmor.unam.mx/~oguzman/) and [Michael Hrusak](https://www.matmor.unam.mx/~michael/).
+- The Category Dichotomy for Ideals. With [Alan Dow](https://webpages.charlotte.edu/adow/) [Osvaldo Guzmán](https://www.matmor.unam.mx/~oguzman/) and [Michael Hrusak](https://www.matmor.unam.mx/~michael/).
+- The Measure Dichotomy for $F_\sigma$ ideals. With [Michael Hrusak](https://www.matmor.unam.mx/~michael/). 
 
 [*curriculum vitae*](/docs/CV-RaulFigueroa.pdf), [*e-mail*](mailto:r.figueroa@uniandes.edu.co).
 
