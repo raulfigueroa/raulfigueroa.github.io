@@ -1,10 +1,2 @@
-theme: jekyll-theme-minimal
-title: --------------------------
-subtitle: Raúl Figueroa Sierra
-description: r.figueroa@uniandes.edu.co
-show_downloads: FALSE
-logo: /docs/photo.JPG
-google_site_verification: "cs6-kp-p3l1nFtvgcp6UR3vvEfn3ZB9PqfPl5OeZdjI"
-plugins:
-  - jekyll-sitemap
-
+title: Raúl Figueroa Sierra
+theme: cayman
