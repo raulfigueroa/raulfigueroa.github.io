@@ -1,0 +1,92 @@
+% Created 2025-02-06 Thu 15:20
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{bm}
+\hypersetup{colorlinks=true}
+\usepackage[left=1.125in,right=1.1in,top=1.1in,bottom=1.125in]{geometry}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\E}{\mathbf{E}}
+\newcommand{\Spp}{\mathbf{S}_{++}^n}
+\newcommand{\Sp}{\mathbf{S}_{+}^n}
+\newcommand{\SSS}{\mathbf{S}^n}
+\newcommand{\bR}{\overline{\mathbf{R}}}
+\newcommand{\prox}{\operatorname{prox}}
+\newcommand{\epi}{\operatorname{epi}}
+\newcommand{\sign}{\operatorname{sign}}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\Tr}{\operatorname{tr}}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\date{}
+\title{}
+\hypersetup{
+ pdfauthor={Mateo Diaz},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 30.0.93 (Org mode 9.7.19)}, 
+ pdflang={English}}
+\usepackage{biblatex}
+
+\begin{document}
+
+\section*{\textbf{Nonlinear Optimization 2, Spring 2025 - Homework 1} \\ Due at 11:49PM on Friday 2/14 (Gradescope)}
+\label{sec:org2921ad4}
+\textbf{Your submitted solutions to assignments should be your own work. While discussing homework problems with peers is permitted, the final work and implementation of any discussed ideas must be executed solely by you. Acknowledge any source you consult.}
+\textbf{\textcolor{red}{Do not use any type of Large Language Model, e.g., ChatGPT, to blindly answer this assignment. If you do, your submission will be voided and you will get zero as a grade.}} \vspace{.5cm}
+
+\noindent Throughout let \(\E\) be a Euclidean space and use the symbol \(\bR\) to denote \(\RR \cup \{\pm \infty\}\).
+\subsection*{Problem 1 - Continuity of convex functions}
+\label{sec:orga4b7fcc}
+\begin{itemize}
+\item[(a)] We say that a function $f \colon \E \rightarrow \bR$ is lower semicontinuous (lsc) if its epigraph $\epi f = \{(x, t) \mid f(x) \leq t\}$ is closed. Show that this property is equivalent to having that for all $x^{\star} \in \E$, $\liminf_{x \rightarrow x^{\star}} f(x) \geq f(x^{\star}).$
+\item[(b)] Consider the function $f\colon \RR^{2} \rightarrow \bR$ defined by
+$$
+f(x, y) = \begin{cases} \frac{x^{2}}{y} & \text{if }y>0, \\
+0 & \text{if }(x, y) = 0, \\
++ \infty & \text{otherwise} \end{cases}
+$$
+Show that $f$ is convex and lsc, but it is not continuous relative to its domain (i.e., $f\colon \dom f \rightarrow \RR$ is not continuous).
+\item[(c)] Suppose that a convex function $f\colon \E \rightarrow \bR$ takes the value $-\infty$ at some point. Prove that it must take the value $-\infty$ at every point in the interior of $\{x \in \E \mid f(x) < +\infty\}$.
+\end{itemize}
+\subsection*{Problem 2 - Fun with the normies}
+\label{sec:org0f7249e}
+Let \(Q \subseteq \E\) be a closed, convex set and let \(\iota_{Q}\) be its indicator function, i.e., it takes values \(\iota_{Q}(x) = 0\) for \(x \in Q\) and infinity everywhere else. Define the normal set to \(Q\) at \(x\) by
+$$
+N_{Q}(x) = \left\{g \in \E \mid \langle g, y - x\rangle \leq 0, \text{ for all } y \in Q\right\}.
+$$
+\begin{enumerate}
+\item[(a)] Prove that for any $x\in Q$, $N_{Q}(x)$ is a closed, convex cone, i.e., it is a closed set such that for any $\alpha_{1}, \alpha_{2} \geq 0$ and $g_{1}, g_{2} \in N_{Q}(x)$ we have that $\alpha_{1} g_{1} + \alpha_{2} g_{2} \in N_{Q}(x).$
+\item[(b)] Show that $\partial \iota_{Q}(x) = N_{Q}(x)$ for all $x \in \E$. For what points, $x \in \E$, is $N_{Q}(x)$ not empty?
+\item[(c)] Define the projection $\textrm{proj}_{Q} \colon \E \rightarrow Q$ given by $\textrm{proj}_{Q}(x) := \operatorname{argmin}_{y \in Q} \|y - x\|$.  Show that given any $x \in Q$, we have $g \in N_{Q}(x)$ if, and only if, $x = \textrm{proj}_{Q}(x + g).$
+\item[(d)] Prove that the projection $\textrm{proj}_{Q}(\cdot)$ is $1$-Lipschitz.
+\end{enumerate}
+\subsection*{Problem 3 - Positive semidefinite cone}
+\label{sec:org2c1bf41}
+
+Let \(\Sp\) be the cone of \(n \times n\) positive semidefinite matrices.
+
+\begin{enumerate}
+\item[(a)] Show that for any $X, Y \in \Sp$ we have that $\Tr(XY) \geq 0$. \textbf{Hint}: Use a factorization.
+\item[(b)] Given a symmetric matrix $Z \in \SSS$, use its spectral decomposition to find a formula for $\text{proj}_{\Sp}(Z)$ and justify why is it correct.
+\end{enumerate}
+\subsection*{Problem 4 - Computing gradients}
+\label{sec:org8ebf988}
+Let \(\Spp\) be the set of \(n\times n\) positive definite matrices. Consider the function \(f \colon \Spp \rightarrow \bR\) defined by \(f(X) = \Tr(X^{-1})\) for \(X \in \Spp\). Calculate the gradient \(\nabla f(X)\) and second derivative \(\nabla^2 f(X)[Y, Y]\) (for a matrix \(Y \in \SSS\)), and conclude that \(f\) is strictly convex on \(\Spp\).
+\end{document}
