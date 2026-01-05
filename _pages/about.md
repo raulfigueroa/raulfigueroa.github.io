@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I specialize in extreme value theory, heavy-tailed time series, and machine learning. My work often involves risk assessment with a primary focus on climate science applications.
+I mathematician from Bogotá
 
 [*e-mail*](mailto:gloriapatricia.buriticaborda@agroparistech.fr) 
 
