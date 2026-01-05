@@ -1,0 +1,116 @@
+% Created 2025-04-10 Thu 02:17
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{bm}
+\hypersetup{colorlinks=true}
+\usepackage[left=1.125in,right=1.1in,top=1.1in,bottom=1.125in]{geometry}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\E}{\mathbf{E}}
+\newcommand{\EEE}{\mathbf{E}}
+\newcommand{\YY}{\mathbf{Y}}
+\newcommand{\YYY}{\mathbf{Y}}
+\newcommand{\Spp}{\mathbf{S}_{++}^n}
+\newcommand{\Sp}{\mathbf{S}_{+}^n}
+\newcommand{\SSS}{\mathbf{S}^n}
+\newcommand{\bR}{\overline{\mathbf{R}}}
+\newcommand{\prox}{\operatorname{prox}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\cone}{\operatorname{cone}}
+\newcommand{\epi}{\operatorname{epi}}
+\newcommand{\aff}{\operatorname{aff}}
+\newcommand{\relint}{\operatorname{relint}}
+\newcommand{\sign}{\operatorname{sign}}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\Tr}{\operatorname{tr}}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\date{}
+\title{}
+\hypersetup{
+ pdfauthor={Mateo Diaz},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 30.1 (Org mode 9.7.11)}, 
+ pdflang={English}}
+\usepackage{biblatex}
+
+\begin{document}
+
+\section*{\textbf{Nonlinear Optimization 2, Spring 2025 - Homework 4} \\ Due at 11:49PM on Friday 4/18 (Gradescope)}
+\label{sec:orgcd5db79}
+\textbf{Your submitted solutions to assignments should be your own work. You are allowed to discuss homework problems with other students, but should carry out the execution of any thoughts/directions discussed independently, on your own. Acknowledge any source you consult.}
+\textbf{\textcolor{red}{Do not use any type of Large Language Model, e.g., ChatGPT, to blindly answer this assignment. If you do, your submission will be voided and you will get zero as a grade.}} \vspace{.5cm}
+\subsection*{Problem 1 - Polyhedra again}
+\label{sec:org0de9819}
+Consider a polyhedral function \(f \colon \EEE \rightarrow \RR \cup \{+\infty\}\), i.e., its epigraph is a polyhedron. Suppose we generate a sequence via
+$$
+x_{k+1} \leftarrow \textrm{prox}_{f}(x_{k}).
+$$
+Show that there is a finite number of polyhedra \(P_1, \dots, P_k\) such that for any \(x\in \EEE\) there is \(i \in [k]\) such that \(\partial f(x) = P_{i}\). Use this fact to show that the sequence \(x_k\) converges to a minimizer after finitely many steps.
+\subsection*{Problem 2 - Pythagoras' dream}
+\label{sec:orgbe05fde}
+Let \(f\colon \EEE \rightarrow \RR \cup \{+ \infty \}\) be a closed, convex, proper function and \(z \in \EEE\) arbitrary.
+\begin{description}
+\item[(a)] Show that
+$$
+\frac{1}{2}\|z\|^{2} = \inf_{x \in \EEE} \left\{f(x) + \frac{1}{2}\|x - z\|^{2}\right\} + \inf_{y \in \EEE} \left\{f^{*}(y) + \frac{1}{2}\|y - z\|^{2}\right\}.
+$$
+\item[(b)] Prove that the optimal solutions $x^{\star}, y^{\star}$ of the two problems above are attained and can be characterized by
+$$
+z = x^{\star} + y^{\star} \quad \text{and} \quad y^{\star} \in \partial f(x^{\star}).
+$$
+\item[(c)] Conclude that $y^{\star} \in \partial f(x^\star)$ if, and only if, $x^\star \in \partial f^*(y^\star)$.
+\end{description}
+\subsection*{Problem 3 - Le wild linear system appears}
+\label{sec:org158c5f4}
+Consider the problem of minimizing
+$$
+\inf_{x \in \EEE} f(x) + g(Ax)
+$$
+with \(f \colon \EEE \rightarrow \RR \cup \{+ \infty\}\) and \(g \colon \YYY \rightarrow \RR \cup \{+\infty\}\) be closed, convex, proper functions, and \(A \colon \EEE \rightarrow \YYY\) be a linear map.
+\begin{description}
+    \item[(a)] Rewrite this problem as the ADMM problem we considered in Lecture 18 with two variables $x$ and $z$. Write down the ADMM algorithm. Can you write this only in terms of $\prox_{\alpha f}$ and $\prox_{\alpha g}$?
+    \item[(b)] Consider a different reformulation of the form
+$$
+\inf_{y, w, z} \{f(y) + g(z) \mid w = y, Aw = z\}.
+$$
+Write down the ADMM update using variables $x = (y, w)$ and $z$. Do you need to solve a linear system?
+    \item[(c)] Let $A \in \RR^{m \times n$}, $b \in \RR^{m}$, and $c \in \RR^{n}$. Consider the linear programming problem $\inf\{ c^{\top} x \mid Ax = b, x \geq 0\}$. Let $f(x) = c^{\top} x + \iota_{\{w\mid Aw = b\}}(x)$ and $g(x) = \iota_{\RR^{n}_{+}}(x)$, and write the ADMM update for the problem $\inf\{f(x) + g(z) \mid x = z\}.$ Do you need to solve a linear system?
+\end{description}
+\subsection*{Problem 4 - Matrix-free linear programming}
+\label{sec:org2dbce59}
+\begin{description}
+    \item[(a)] Given a matrix $A \in \RR^{m \times n}$ and vectors $c \in \RR^{n}, b \in \RR^{m}$. Consider the problem of minimizing
+    $$
+    \inf\{ c^{\top} x \mid Ax = b, x \geq 0\}.
+    $$
+    Consider the functions $f(x) = c^\top x + \iota_{\RR^n_m}(x)$ and $g(w) = \iota_{\{b\}}(w)$. Find explicit expressions for $\prox_{\tau f}$ and $\prox_{s g^*}$.
+    \item[(b)] Code the PDHG method from scratch based on the pseudocode from Lecture 19. You can only use Numpy or SciPy for matrix operations, you cannot call a method that already implements PDHG.
+    \item[(c)]
+    Denote the set of all feasible grading rubrics $(H,M,F)\in\mathbb{R}^3$ as
+    $$ \mathcal{Q}=\{(H,M,F) \mid H+M+F\leq 100,\ H,M\geq 15,\ F\geq M,\ 50\leq M+F\leq 80,\ H+M+F\geq 90\}.$$
+    Recall that we will compute your grade as maximization problem of the form $\max\{b^{\top} y : A^{\top}y \leq c\},$ write the $A, b$, and $c$. How shall you set stepsizes $\tau$ and $s$ in PDHG to ensure convergence for this problem?
+    \item[(c)] Use your PDHG implementation to find the grades of the following hypothetical students:
+    $$ (C_H,C_M,C_F,C_P) = (100,90,80,70),$$
+    $$ (C_H,C_M,C_F,C_P) = (85,85,85,85),$$
+    $$ (C_H,C_M,C_F,C_P) = (70,80,90,100),$$
+$$(C_H, C_{M}, C_{F}, C_{P}) = (90, 95, 85, 80).$$
+\end{description}
+\end{document}

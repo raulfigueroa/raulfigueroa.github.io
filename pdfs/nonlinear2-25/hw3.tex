@@ -1,0 +1,138 @@
+% Created 2025-03-02 Sun 11:24
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{bm}
+\hypersetup{colorlinks=true}
+\usepackage[left=1.125in,right=1.1in,top=1.1in,bottom=1.125in]{geometry}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+\newcommand{\RR}{\mathbf{R}}
+\newcommand{\E}{\mathbf{E}}
+\newcommand{\EEE}{\mathbf{E}}
+\newcommand{\YY}{\mathbf{Y}}
+\newcommand{\Spp}{\mathbf{S}_{++}^n}
+\newcommand{\Sp}{\mathbf{S}_{+}^n}
+\newcommand{\SSS}{\mathbf{S}^n}
+\newcommand{\bR}{\overline{\mathbf{R}}}
+\newcommand{\prox}{\operatorname{prox}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\cone}{\operatorname{cone}}
+\newcommand{\epi}{\operatorname{epi}}
+\newcommand{\aff}{\operatorname{aff}}
+\newcommand{\relint}{\operatorname{relint}}
+\newcommand{\sign}{\operatorname{sign}}
+\newcommand{\dom}{\operatorname{dom}}
+\newcommand{\Tr}{\operatorname{tr}}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\date{}
+\title{}
+\hypersetup{
+ pdfauthor={Mateo Diaz},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 30.0.93 (Org mode 9.7.19)}, 
+ pdflang={English}}
+\usepackage{biblatex}
+
+\begin{document}
+
+\section*{\textbf{Nonlinear Optimization 2, Spring 2025 - Homework 3} \\ Due at 11:49PM on Friday 3/14 (Gradescope)}
+\label{sec:org4d01b39}
+\textbf{Your submitted solutions to assignments should be your own work. You are allowed to discuss homework problems with other students, but should carry out the execution of any thoughts/directions discussed independently, on your own. Acknowledge any source you consult.}
+\textbf{\textcolor{red}{Do not use any type of Large Language Model, e.g., ChatGPT, to blindly answer this assignment. If you do, your submission will be voided and you will get zero as a grade.}} \vspace{.5cm}
+\subsection*{Problem 1 - Polyhedral wonderland}
+\label{sec:org18c52d6}
+We say that a set \(Q\) is polyhedral if it can be described as an intersection of finitely many halfspaces. We say that a function is polyhedral if its epigraph is polyhedral. For this problems you can use the following two facts from polyhedral geometry (if you are interested see Section 5.1 of Borwein and Lewis):
+\begin{enumerate}
+\item[] \textbf{Fact 1} A set $Q \subseteq \EEE$ is polyhedral if, and only if, there are $k, r \geq 0$ so that $Q$ can be written as
+$$
+Q = \conv\{p_{1}, \dots, p_{k}\} + \cone \{c_{1}, \dots, c_{r}\}
+$$
+with $\conv$ the convex hull and $\cone$ the conic hull, and $p_{1}, \dots, p_{k}, c_{1}, \dots, c_{r} \in \EEE$.
+\item[] \textbf{Fact 2} A polyhedral function $f \colon \EEE \rightarrow \RR \cup \{\pm \infty\}$ can be decomposed as
+$$
+f(x) = \max_{i \in I} g_{i}(x) + \iota_{P}(x)
+$$
+where the index set $I$ is finite (and potentially empty), the functions $g_{i}$ are affine, and $P \subseteq \EEE$ is polyhedral (and potentially empty).
+\end{enumerate}
+\begin{description}
+    \item[(a)] Let $A \colon \EEE \rightarrow \YY$ be a linear map between Euclidean spaces. Show that the following hold.
+\begin{enumerate}
+\item If the set $P \subseteq \EEE$ is polyhedral then so is its image $AP$.
+\item If the set $K \subseteq \YY$ is polyhedral then so is its preimage $A^{-1}K$.
+\item The sum and pointwise max of finitely many polyhedral functions are polyhedral.
+\item If the function $g \colon \YY \rightarrow \RR \cup \{\pm \infty\}$ is polyhedral then so is the composition $g \circ A$.
+\item If the function $q \colon \EEE \times \YY \rightarrow \RR \cup \{\pm \infty\}$ is polyhedral then so is the function $h \colon \YY \rightarrow \RR \cup \{\pm \infty\}$ given by $h(u) = \inf_{x \in \EEE} q(x, u)$.
+\end{enumerate}
+    \item[(b)] Let $f \colon \EEE \rightarrow \RR \cup \{+\infty\}$ is polyhedral. Prove that $\partial f (x)$ is nonempty and polyhedral for all $x \in \dom f$. Optional: Show that it $\partial f(x)$ bounded if, and only if, $x \in \operatorname{int}\dom f$.
+\item[(c)] Argue (without repeating the full proof) that if $f$ and $g$ are polyhedral in the Fenchel Duality Theorem from Lecture 6, we can substitute the constraint qualitfication condition with ``there is a point $\widehat x \in \dom f$ such that $A \widehat x \in \dom g$.''
+    \item[(d)] Consider the primal $p^{\star} = \min\{ c^{\top} x : Ax = b, x \geq 0\}$ and dual $d^{\star} = \max \{b^{\top} y : A^{\top}y \leq c\}$ problems.
+Use (c) to show that there are four possibilities for these primal and dual LPs:
+\begin{enumerate}
+\item Both primal and dual values are finite and attained. Moreover, $p^{\star} = d^{\star}$.
+\item The primal problem is infeasible and the dual is unbounded, thus $p^{\star} = +\infty = d^{\star}$.
+\item The primal problem is unbounded and the dual is infeasible, thus  $p^{\star} = -\infty = d^{\star}$.
+\item Both primal and dual problems are infeasible, thus $p^{\star} = +\infty$ and $d^{\star} - \infty$.
+\end{enumerate}
+\end{itemize}
+\end{description}
+\subsection*{Problem 2 - Vertices and lines}
+\label{sec:orge03734d}
+Suppose that the polyhedra \(P = \{x \in \RR^{n} \mid Ax = b, x \geq 0\}\) and \(Q= \{y \in \RR^m \mid A^{\top}y \leq c\}\) are nonempty.
+\begin{description}
+\item[(a)] Prove that $Q$ has a vertex if, and only if, it doesn't contain a one dimensional affine subspace, i.e., for all $x \in Q$ and $v \in \RR^{d}$ there is $\alpha \in \RR$ such that $x + \alpha v \not\in Q$.
+\item[(b)] Show that a polyhedron in standard form $P$ has to have at least one basic feasible solution.
+\end{description}
+\subsection*{Problem 3 - You've gotta have standards}
+\label{sec:org394db3d}
+Consider the following generic linear program and standard form program:
+
+\begin{equation*}
+p_{1}^{\star} = \left\{
+\begin{array}{ll}
+\max   & c^\top x \\
+\text{s.t.} & Ax \leq b, \\
+                  & x \in \mathbb{R}^n
+\end{array}
+\right.
+\quad \text{and} \quad
+p_{2}^{\star} = \left\{
+\begin{array}{ll}
+\min   & -c^\top u + c^{\top} v \\
+\text{s.t.} & Au - Av + s = b, \\
+                  & u, v, s \geq 0
+\end{array}
+\right.
+\end{equation*}
+Prove that \(p^\star_1 = - p_2^\star\). Do not assume any of these problems are necessarily feasible or have bounded objective value.
+\subsection*{Problem 4 - Getting our hands dirty}
+\label{sec:orge838090}
+
+\begin{description}
+    \item[(a)] Code the Simplex method from scratch based on the pseudocode from Lecture 11. You can only use Numpy or SciPy for matrix operations, you cannot call a method that already implements Simplex.
+    \item[(b)] Denote the set of all feasible grading rubrics $(H,M,F)\in\mathbb{R}^3$ as
+    $$ \mathcal{Q}=\{(H,M,F) \mid H+M+F\leq 100,\ H,M\geq 15,\ F\geq M,\ 50\leq M+F\leq 80,\ H+M+F\geq 90\}.$$
+    Recall that we will compute your grade as maximization problem of the form $\max\{b^{\top} y : A^{\top}y \leq c\},$ write the $A, b$, and $c$. Find the dual of this LP.
+    \item[(c)] Use your Simplex implementation to find the grades of the following hypothetical students:
+    $$ (C_H,C_M,C_F,C_P) = (100,90,80,70),$$
+    $$ (C_H,C_M,C_F,C_P) = (85,85,85,85),$$
+    $$ (C_H,C_M,C_F,C_P) = (70,80,90,100),$$
+$$(C_H, C_{M}, C_{F}, C_{P}) = (90, 95, 85, 80).$$
+\end{description}
+\end{document}

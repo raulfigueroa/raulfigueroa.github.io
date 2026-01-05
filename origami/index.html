@@ -1,0 +1,633 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Mathematics of Origami (Fall 2024) &middot; Mateo Díaz</title>
+    <meta name="title" content="Mathematics of Origami (Fall 2024) &middot; Mateo Díaz" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.8363fdb90097634558e4c060565c2caefbddbf21152432d1b5ca1f55adca4e75.css"
+    integrity="sha256-g2P9uQCXY0VY5MBgVlwsrvvdvyEVJDLRtcofVa3KTnU="
+  />
+  
+  
+  
+  
+    
+    
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.d4b727caf411cb5c3b421d0d427ed1e3daeafe0d04840327efad4978430edb8c.js"
+      integrity="sha256-1LcnyvQRy1w7Qh0NQn7R49rq/g0EhAMn761JeEMO24w="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="/origami/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="/origami/">
+  <meta property="og:site_name" content="Mateo Díaz">
+  <meta property="og:title" content="Mathematics of Origami (Fall 2024)">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mathematics of Origami (Fall 2024)">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Mateo Díaz",
+    "name": "Mathematics of Origami (Fall 2024)",
+    "headline": "Mathematics of Origami (Fall 2024)",
+    
+    
+    "inLanguage": "en",
+    "url" : "\/origami\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Mateo Díaz"
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "576"
+  }
+  </script>
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "/",
+       "name": "Mateo Díaz",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "name": "Mathematics of Origami ( Fall 2024)",
+       "position": 2
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="Mateo Díaz" />
+  
+  
+    
+      <link href="mailto:mateodd@jhu.edu" rel="me" />
+    
+      <link href="https://github.com/mateodd25" rel="me" />
+    
+      <link href="https://linkedin.com/in/mateo-diaz" rel="me" />
+    
+      <link href="https://scholar.google.com/citations?user=F3cPGhsAAAAJ&amp;hl=en" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="z-40 flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Mateo Díaz</a
+  >
+
+    </div>
+    
+      
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span
+              >
+            </li>
+            
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/publications/"
+                      title="Publications"
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >publications</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/teaching/"
+                      title="Teaching"
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >teaching</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/pdfs/cv.pdf"
+                      title=""
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >curriculum vitae</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/biosketch"
+                      title=""
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >biosketch</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/random/"
+                      title="Random photos"
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >random</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+              
+            
+          </ul>
+        </div>
+      </label>
+      
+      <ul class="hidden list-none flex-row text-end sm:flex">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/publications/"
+                  title="Publications"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >publications</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/teaching/"
+                  title="Teaching"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >teaching</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/pdfs/cv.pdf"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >curriculum vitae</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/biosketch"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >biosketch</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/random/"
+                  title="Random photos"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >random</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article class="max-w-full">
+    <header>
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Mathematics of Origami (Fall 2024)
+      </h1>
+    </header>
+    <section class="prose mt-6 max-w-full dark:prose-invert">
+      
+  
+  
+  
+  
+  
+
+  
+  
+    
+    
+  
+  <figure class="mx-auto my-0 rounded-md">
+    <img src="/origami-band.jpg" alt="" class="mx-auto my-0 rounded-md"/>
+    
+  </figure>
+
+
+<p>This course introduces the mathematics of origami and origami design. It follows a flipped classroom format. Students complete assigned readings before each class, then participate in group discussions and problem-solving sessions during class time.</p>
+<h2 id="coordinates" class="relative group">Coordinates <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#coordinates" aria-label="Anchor">#</a></span></h2><p><strong>Time</strong>: M 9:00AM - 10:00AM <br />
+<strong>Location</strong>: Wyman N425</p>
+<h2 id="instructor" class="relative group">Instructor <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#instructor" aria-label="Anchor">#</a></span></h2><p>Mateo Díaz (mateodd <code>at</code> jhu <del>dot</del> edu)</p>
+<h2 id="grading-system" class="relative group">Grading system <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#grading-system" aria-label="Anchor">#</a></span></h2><p>Grades will be based on two components: participation (60%) and a final project (40%).</p>
+<h3 id="participation" class="relative group">Participation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#participation" aria-label="Anchor">#</a></span></h3><p>Students are expected to read before class and actively engage with the instructor and fellow students. Asking questions, suggesting potential solutions, and sharing thoughts during class are ways to engage.</p>
+<h3 id="final-project" class="relative group">Final project <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#final-project" aria-label="Anchor">#</a></span></h3><p>For the final project, students have three possibilities: (1) read a paper concerning Origami or a chapter from [O] (discuss with the instructor before choosing) and present it to class, (2) design an arbitrary origami figure and do a presentation about the design process and the decisions that it involved, (3) solve one of the challenges below and do a presentation about it.</p>
+<p>Needless to say if you choose to do (2) or (3) you need to bring a physical folded figure to class.</p>
+<h2 id="readings" class="relative group">Readings <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#readings" aria-label="Anchor">#</a></span></h2><p>We will use two books:</p>
+<ul>
+<li><a href="https://www.amazon.com/Origami-Design-Secrets-Mathematical-Methods/dp/1568814364" target="_blank" rel="noreferrer">Origami Design Secrets: Mathematical Methods for an Ancient Art</a> by Robert Lang (Second Edition) [ODS].</li>
+<li><a href="https://www.cambridge.org/us/universitypress/subjects/mathematics/recreational-mathematics/origametry-mathematical-methods-paper-folding?format=PB" target="_blank" rel="noreferrer">Origametry: Mathematical Methods in Paper Folding</a> by Thomas Hull [O].</li>
+</ul>
+<p>A copy of [ODS] will be provided to each student (to be returned by the end of the semester). [O] can be accessed online by Hopkins students in <a href="https://www-cambridge-org.proxy1.library.jhu.edu/core/books/origametry/F1221B0998585B16C87B7AD8DDC05358" target="_blank" rel="noreferrer">this link.</a></p>
+<table>
+  <thead>
+      <tr>
+          <th>Date</th>
+          <th>Topic</th>
+          <th>Reading</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>September 9</td>
+          <td>Introduction</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>September 16</td>
+          <td>Basics: diagrams, crease patterns, and traditional basis</td>
+          <td>ODS: 2, 4</td>
+      </tr>
+      <tr>
+          <td>September 23</td>
+          <td>Origami constructions</td>
+          <td>O: 1.1, 1.2, 1.3</td>
+      </tr>
+      <tr>
+          <td>September 30</td>
+          <td>Axioms and solvability of equations</td>
+          <td>O: 1.5, 2.1, 2.2</td>
+      </tr>
+      <tr>
+          <td>October 7</td>
+          <td>Splitting points and grafting</td>
+          <td>ODS: 5, 6</td>
+      </tr>
+      <tr>
+          <td>October 14</td>
+          <td>Circle Packing</td>
+          <td>ODS: 9</td>
+      </tr>
+      <tr>
+          <td>October 21</td>
+          <td>Molecules</td>
+          <td>ODS: 10</td>
+      </tr>
+      <tr>
+          <td>October 28</td>
+          <td>Tree theory</td>
+          <td>ODS: 11</td>
+      </tr>
+      <tr>
+          <td>November 4</td>
+          <td>Box pleating</td>
+          <td>ODS: 12</td>
+      </tr>
+      <tr>
+          <td>November 11</td>
+          <td>When can a crease pattern be folded flat?</td>
+          <td>O: 5.1, 5.2, 5.3, or <a href="http://origametry.net/papers/origamimath.pdf" target="_blank" rel="noreferrer">This paper</a></td>
+      </tr>
+      <tr>
+          <td>November 18</td>
+          <td>Project discussion</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>November 25</td>
+          <td>THANKSGIVING</td>
+          <td>-</td>
+      </tr>
+      <tr>
+          <td>December 2</td>
+          <td>Final project presentations</td>
+          <td>-</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="challenges" class="relative group">Challenges <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#challenges" aria-label="Anchor">#</a></span></h2><p>There exist many solutions for some of these challenges. Do not look them up, do it yourself!</p>
+<ol>
+<li>Design a <a href="https://en.wikipedia.org/wiki/Callinectes_sapidus" target="_blank" rel="noreferrer">Callinectes sapidus</a> (Maryland blue crab) using a one square pice of paper.</li>
+<li>Design a <a href="https://en.wikipedia.org/wiki/Baltimore_oriole" target="_blank" rel="noreferrer">Icterus galbula</a> (Baltimore oriole) using one square piece of paper. Your figure must incorporate a &ldquo;color change&rdquo; to show the oriole&rsquo;s distinctive orange/black patterns. Use paper that&rsquo;s orange on one side and black on the other. The final design should display both colors to match the oriole&rsquo;s appearance.</li>
+<li>Design a <a href="https://en.wikipedia.org/wiki/Blue_jay" target="_blank" rel="noreferrer">Cyanocitta cristata</a> (Blue jay) using one square piece of paper. Just as with the previous challenge, your figure must incorporate a &ldquo;color change&rdquo; (white and blue).</li>
+<li>Design a &ldquo;3D shadow&rdquo; of a 4D <a href="https://en.wikipedia.org/wiki/Hypercube" target="_blank" rel="noreferrer">hypercube</a> (you can use modular origami).</li>
+<li>Design an origami modular for <a href="https://imgur.com/three-intersecting-golden-rectangles-will-create-vertices-of-icosahedron-ZrUJQqZ" target="_blank" rel="noreferrer">three intersecting golden rectangles</a>.</li>
+<li>Design an origami tesselation (one square pice of paper) of at least two <a href="https://mathworld.wolfram.com/RegularTessellation.html" target="_blank" rel="noreferrer">regular tessellations</a> of the plane (one has to use hexagons).</li>
+<li>Design origami modulars for at least two of the <a href="https://mathworld.wolfram.com/PlatonicSolid.html" target="_blank" rel="noreferrer">Platonic solids</a>.</li>
+<li>Design an origami modular of a <a href="https://en.wikipedia.org/wiki/List_of_polyhedral_stellations" target="_blank" rel="noreferrer">polyhedral stellation</a>.</li>
+</ol>
+<h2 id="resources" class="relative group">Resources <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#resources" aria-label="Anchor">#</a></span></h2><ul>
+<li>
+<p><strong>Useful websites</strong> <br />
+<a href="https://cfcorigami.com/" target="_blank" rel="noreferrer">CFC Origami</a> <br />
+<a href="https://www.giladorigami.com/" target="_blank" rel="noreferrer">Gilad&rsquo;s Origami Page</a> <br />
+<a href="https://www.origami-shop.com/en/" target="_blank" rel="noreferrer">Origami Shop</a> <br /></p>
+</li>
+<li>
+<p><strong>What paper to use?</strong> <br />
+Simple figures: any paper. <br />
+Intermediate figures: <a href="https://shop.tarosorigami.com/collections/tissue-foil" target="_blank" rel="noreferrer">Tissue foil paper</a> for beginners. <br />
+Complex figures: <a href="https://www.reddit.com/r/origami/comments/17rwzuo/good_tutorials_for_making_double_tissue/" target="_blank" rel="noreferrer">Double tissue paper</a>  (with methyl cellulose). <br /></p>
+<p>You can make the later two papers. All of the materials to make these can be found in <a href="https://www.dickblick.com/stores/maryland/baltimore/" target="_blank" rel="noreferrer">Blick Art Materials</a>.</p>
+</li>
+</ul>
+
+    </section>
+    <footer class="pt-8">
+      
+
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+      
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>

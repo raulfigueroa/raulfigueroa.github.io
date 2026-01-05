@@ -1,0 +1,577 @@
+
+
+
+
+
+
+
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"
+><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFFFFF" />
+  
+  <title>Mathematics of Data Science - 554.747 (Fall 2025) &middot; Mateo Díaz</title>
+    <meta name="title" content="Mathematics of Data Science - 554.747 (Fall 2025) &middot; Mateo Díaz" />
+  
+  
+  
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.8a082f81b27f3cb2ee528df0b0bdc39787034cf2cc34d4669fbc9977c929023c.js"
+    integrity="sha256-iggvgbJ/PLLuUo3wsL3Dl4cDTPLMNNRmn7yZd8kpAjw="
+  ></script>
+  
+  
+  
+  
+  
+  
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.8363fdb90097634558e4c060565c2caefbddbf21152432d1b5ca1f55adca4e75.css"
+    integrity="sha256-g2P9uQCXY0VY5MBgVlwsrvvdvyEVJDLRtcofVa3KTnU="
+  />
+  
+  
+  
+  
+    
+    
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.d4b727caf411cb5c3b421d0d427ed1e3daeafe0d04840327efad4978430edb8c.js"
+      integrity="sha256-1LcnyvQRy1w7Qh0NQn7R49rq/g0EhAMn761JeEMO24w="
+      data-copy="Copy"
+      data-copied="Copied"
+    ></script>
+  
+  
+  <meta
+    name="description"
+    content="
+      
+        
+      
+    "
+  />
+  
+  
+  
+  
+    <link rel="canonical" href="/mds/" />
+  
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+  
+  
+  
+  
+  
+  
+  
+  
+  <meta property="og:url" content="/mds/">
+  <meta property="og:site_name" content="Mateo Díaz">
+  <meta property="og:title" content="Mathematics of Data Science - 554.747 (Fall 2025)">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+
+  
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mathematics of Data Science - 554.747 (Fall 2025)">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Mateo Díaz",
+    "name": "Mathematics of Data Science - 554.747 (Fall 2025)",
+    "headline": "Mathematics of Data Science - 554.747 (Fall 2025)",
+    
+    
+    "inLanguage": "en",
+    "url" : "\/mds\/",
+    "author" : {
+      "@type": "Person",
+      "name": "Mateo Díaz"
+    },
+    
+    
+    
+    
+    
+    
+    
+    
+    "mainEntityOfPage": "true",
+    "wordCount": "893"
+  }
+  </script>
+    <script type="application/ld+json">
+    {
+   "@context": "https://schema.org",
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+     {
+       "@type": "ListItem",
+       "item": "/",
+       "name": "Mateo Díaz",
+       "position": 1
+     },
+     {
+       "@type": "ListItem",
+       "name": "Mathematics of Data Science 554.747 ( Fall 2025)",
+       "position": 2
+     }
+   ]
+ }
+  </script>
+
+  
+  
+    <meta name="author" content="Mateo Díaz" />
+  
+  
+    
+      <link href="mailto:mateodd@jhu.edu" rel="me" />
+    
+      <link href="https://github.com/mateodd25" rel="me" />
+    
+      <link href="https://linkedin.com/in/mateo-diaz" rel="me" />
+    
+      <link href="https://scholar.google.com/citations?user=F3cPGhsAAAAJ&amp;hl=en" rel="me" />
+    
+  
+  
+  
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+
+
+  
+  
+</head>
+<body
+    class="m-auto flex h-screen max-w-7xl flex-col bg-neutral px-6 text-lg leading-7 text-neutral-900 dark:bg-neutral-800 dark:text-neutral sm:px-14 md:px-24 lg:px-32"
+  >
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="-translate-y-8 rounded-b-lg bg-primary-200 px-3 py-1 text-sm focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content"
+        ><span class="pe-2 font-bold text-primary-600 dark:text-primary-400">&darr;</span
+        >Skip to main content</a
+      >
+    </div>
+    
+    
+      <header class="py-6 font-semibold text-neutral-900 dark:text-neutral sm:py-10 print:hidden">
+  <nav class="flex items-start justify-between sm:items-center">
+    
+    <div class="z-40 flex flex-row items-center">
+      
+  <a
+    class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+    rel="me"
+    href="/"
+    >Mateo Díaz</a
+  >
+
+    </div>
+    
+      
+      <label id="menu-button" for="menu-controller" class="block sm:hidden">
+        <input type="checkbox" id="menu-controller" class="hidden" />
+        <div class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400">
+          <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+        </div>
+        <div
+          id="menu-wrapper"
+          class="invisible fixed inset-0 z-30 m-auto h-full w-full cursor-default overflow-auto bg-neutral-100/50 opacity-0 backdrop-blur-sm transition-opacity dark:bg-neutral-900/50"
+        >
+          <ul
+            class="mx-auto flex w-full max-w-7xl list-none flex-col overflow-visible px-6 py-6 text-end sm:px-14 sm:py-10 sm:pt-10 md:px-24 lg:px-32"
+          >
+            <li class="mb-1">
+              <span class="cursor-pointer hover:text-primary-600 dark:hover:text-primary-400"
+                ><span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span></span
+              >
+            </li>
+            
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/publications/"
+                      title="Publications"
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >publications</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/teaching/"
+                      title="Teaching"
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >teaching</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/pdfs/cv.pdf"
+                      title=""
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >curriculum vitae</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/biosketch"
+                      title=""
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >biosketch</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+                
+                <li class="group mb-1">
+                  
+                    <a
+                      href="/random/"
+                      title="Random photos"
+                      onclick="close_menu()"
+                      
+                      ><span
+                          class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                          >random</span
+                        >
+                      </a
+                    >
+                  
+                </li>
+              
+              
+            
+          </ul>
+        </div>
+      </label>
+      
+      <ul class="hidden list-none flex-row text-end sm:flex">
+        
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/publications/"
+                  title="Publications"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >publications</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/teaching/"
+                  title="Teaching"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >teaching</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/pdfs/cv.pdf"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >curriculum vitae</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/biosketch"
+                  title=""
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >biosketch</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+            
+            <li class="group mb-1 sm:mb-0 sm:me-7 sm:last:me-0">
+              
+                <a
+                  href="/random/"
+                  title="Random photos"
+                  
+                  ><span
+                      class="decoration-primary-500 group-hover:underline group-hover:decoration-2 group-hover:underline-offset-2"
+                      >random</span
+                    >
+                  </a
+                >
+              
+            </li>
+          
+          
+
+        
+      </ul>
+    
+  </nav>
+</header>
+
+    
+    <div class="relative flex grow flex-col">
+      <main id="main-content" class="grow">
+        
+  <article class="max-w-full">
+    <header>
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Mathematics of Data Science - 554.747 (Fall 2025)
+      </h1>
+    </header>
+    <section class="prose mt-6 max-w-full dark:prose-invert">
+      
+  
+  
+  
+  
+  
+
+  
+  
+    
+    
+  
+  <figure class="mx-auto my-0 rounded-md">
+    <img src="/orange_band.jpeg" alt="" class="mx-auto my-0 rounded-md"/>
+    
+  </figure>
+
+
+<p>This course revolves around a single question: how can we efficiently extract information from high-dimensional, noisy data with limited samples? This proof-driven graduate class develops the mathematical foundations behind modern data science, drawing on high-dimensional probability, optimization theory, and statistical learning. Core topics include concentration inequalities; dimension reduction; clustering; structure-exploiting inference; generalization via uniform convergence and algorithmic stability; and information-theoretic limits (Le Cam, Fano).</p>
+<h2 id="coordinates" class="relative group">Coordinates <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#coordinates" aria-label="Anchor">#</a></span></h2><p><strong>Time</strong>: TTh 9:00PM - 10:15PM <br />
+<strong>Location</strong>: Hodson 216</p>
+<h2 id="personnel" class="relative group">Personnel <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#personnel" aria-label="Anchor">#</a></span></h2><p><strong>Instructor:</strong><br />
+Mateo Díaz (mateodd <code>at</code> jhu <del>dot</del> edu) <br />
+OH Th 4:00PM - 5:30PM Wyman S429</p>
+<p><strong>Teaching Assistants:</strong><br />
+Pedro Izquierdo Lehmann (pizquie1 <code>at</code> jhu <del>dot</del> edu) <br />
+OH M 9:30-10:15am Wyman S425</p>
+<p>Ian McPherson (imcpher1 <code>at</code> jhu <del>dot</del> edu) <br />
+OH F 9:00AM - 10:30AM Wyman S425</p>
+<h2 id="lecture-notes" class="relative group">Lecture notes <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#lecture-notes" aria-label="Anchor">#</a></span></h2><p>Handwritten lecture notes will be posted here.</p>
+<ul>
+<li><a href="/pdfs/mds/lecture1.pdf">Lecture 1: Logistics and motivation</a></li>
+<li><a href="/pdfs/mds/lecture2.pdf">Lecture 2: Chernoff method, sub-Gaussians, and Hoeffding&rsquo;s inequality</a></li>
+<li><a href="/pdfs/mds/lecture3.pdf">Lecture 3: Robust mean estimation and Chernoff&rsquo;s inequality</a></li>
+<li><a href="/pdfs/mds/lecture4.pdf">Lecture 4: Erdos-Renyi graphs, subexponentials, and Bernstein&rsquo;s inequality</a></li>
+<li><a href="/pdfs/mds/lecture5.pdf">Lecture 5: Johnson-Lindenstrauss Lemma and sub-Gaussian norm</a></li>
+<li><a href="/pdfs/mds/lecture6.pdf">Lecture 6: Orlicz norms and McDiarmid&rsquo;s inequality</a></li>
+<li><a href="/pdfs/mds/lecture7.pdf">Lecture 7: Lipschitz functions of Gaussian random variables</a></li>
+<li><a href="/pdfs/mds/lecture8.pdf">Lecture 8: Concentration of the norm of sub-Gaussian vectors</a></li>
+<li><a href="/pdfs/mds/lecture9.pdf">Lecture 9: Matrix norms and the singular value decomposition</a></li>
+<li><a href="/pdfs/mds/lecture10.pdf">Lecture 10: Introduction to perturbation theory</a></li>
+<li><a href="/pdfs/mds/lecture11.pdf">Lecture 11: Davis-Kahan sin theorem</a></li>
+<li><a href="/pdfs/mds/lecture12.pdf">Lecture 12: Proof of Davis-Kahan, Wedin&rsquo;s theorem, and community detection</a></li>
+<li><a href="/pdfs/mds/lecture13.pdf">Lecture 13: Nets, coverings, and packings</a></li>
+<li><a href="/pdfs/mds/lecture14.pdf">Lecture 14: Covering numbers via volume and error correcting codes</a></li>
+<li><a href="/pdfs/mds/lecture15.pdf">Lecture 15: Two-sided bounds on the singular values of sub-Gaussian matrices</a></li>
+<li><a href="/pdfs/mds/lecture16.pdf">Lecture 16: Covariance estimation and clutering Gaussian Mixtures</a></li>
+<li><a href="/pdfs/mds/lecture17.pdf">Lecture 17: Matrix Hoeffding</a></li>
+<li><a href="/pdfs/mds/lecture18.pdf">Lecture 18: Maximum likelihood estimation</a></li>
+<li><a href="/pdfs/mds/lecture19.pdf">Lecture 19: Ordinary least squares</a></li>
+<li><a href="/pdfs/mds/lecture20.pdf">Lecture 20: Ridge least squares</a></li>
+<li><a href="/pdfs/mds/lecture21.pdf">Lecture 21: Radamacher complexity</a></li>
+<li><a href="/pdfs/mds/lecture22.pdf">Lecture 22: Vapnik-Chervonenkis dimension</a></li>
+<li><a href="/pdfs/mds/lecture23.pdf">Lecture 23: Controlling the VC dimension</a></li>
+<li><a href="/pdfs/mds/lecture24.pdf">Lecture 24: Dimension-free generalization bounds</a></li>
+</ul>
+<h2 id="textbook" class="relative group">Textbook <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#textbook" aria-label="Anchor">#</a></span></h2><p>We will use the following references:</p>
+<ul>
+<li>(<strong>Main reference</strong>) Roman Vershynin, <a href="https://www.math.uci.edu/~rvershyn/papers/HDP-book/HDP-2.pdf" target="_blank" rel="noreferrer">High-Dimensional Probability: An Introduction with Applications in Data Science</a>, 2nd Edition. Cambridge University Press (2025).</li>
+<li>Martin J. Wainwright, <a href="https://www.cambridge.org/core/books/highdimensional-statistics/8A91ECEEC38F46DAB53E9FF8757C7A4E" target="_blank" rel="noreferrer">High-Dimensional Statistics: A Non-Asymptotic Viewpoint</a>, 1st Edition. Cambridge University Press (2019).</li>
+<li>Francis Bach, <a href="https://www.di.ens.fr/~fbach/ltfp_book.pdf" target="_blank" rel="noreferrer">Learning Theory from First Principles</a>, 1st Edition. MIT Press (2024).</li>
+<li>Shai Shalev-Shwartz, Shai Ben-David, <a href="https://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf" target="_blank" rel="noreferrer">Understanding Machine Learning: From Theory to Algorithms</a>, 1st Edition. Cambridge University Press (2014).</li>
+<li>Trevor Hastie, Robert Tibshirani, Jerome Friedman, <a href="https://hastie.su.domains/ElemStatLearn/download.html" target="_blank" rel="noreferrer">The Elements of Statistical Learning: Data Mining, Inference, and Prediction</a>, 2nd Edition. Springer (2009).</li>
+<li>Terence Tao, <a href="https://bookstore.ams.org/gsm-132/" target="_blank" rel="noreferrer">Topics in Random Matrix Theory</a>, 1st Edition. American Mathematical Society (2012).</li>
+<li>Yuxin Chen, Yuejie Chi, Jianqing Fan, Cong Ma, <a href="https://arxiv.org/abs/2012.08496" target="_blank" rel="noreferrer">Spectral Methods for Data Science: A Statistical Perspective</a>, 1st Edition. Now Foundations and Trends (2021).</li>
+</ul>
+<h2 id="grading-system" class="relative group">Grading system <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#grading-system" aria-label="Anchor">#</a></span></h2><p>Your grade will take into account four components: <strong>Homework (50%)</strong>, <strong>Take-home exam (20%)</strong>, <strong>Final project (20%)</strong>, and <strong>Participation (10%)</strong>. In what follows we ellaborate on each of these components.</p>
+<h2 id="homework" class="relative group">Homework <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#homework" aria-label="Anchor">#</a></span></h2><p>Problem sets (approximately five) will be posted here and on the course Canvas. Some homework assignments include at least one question that involves the writing and testing of code; Python is prefered. Please submit homework assignments on Gradescope.</p>
+<p><strong>General policies.</strong> Your solutions must be written legibly and intelligibly in clear English. Use complete sentences. Points may be taken off for disorganized or illegible work. <strong>Collaboration is welcome, but your writeup must be your own&mdash;do not copy answers from somebody else</strong>. Indicate at the top of your homework who you collaborated with on the assignment. If you believe your homework or exam grade to be in error, submit a regrade request. Every student will be allowed <strong>one</strong> late submission, up to 24 hours after the due date (no questions asked); just let us know that you will use your one shot.</p>
+<p><strong>Large language models policy.</strong> The use of large language models (LLMs) for brainstorming, coding assistance, and text polishing is permitted. What is not permitted is blindly answering your assignments or Midterm with LLMs. We reserve the right to run your submissions through <a href="https://gptzero.me/" target="_blank" rel="noreferrer">https://gptzero.me/</a> and if it outputs a probability greater than 90% of being AI-generated, you may be required to take an oral examination to defend your work. Please begin your assignment with a short note explaining how, if at all, you used LLMs.</p>
+<ul>
+<li><a href="/pdfs/mds/hw1.pdf">Homework 1</a></li>
+<li><a href="/pdfs/mds/hw2.pdf">Homework 2</a></li>
+<li><a href="/pdfs/mds/hw3.pdf">Homework 3</a></li>
+</ul>
+<h2 id="midterm" class="relative group">Midterm <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#midterm" aria-label="Anchor">#</a></span></h2><p>There will be one take-home exam with a date TBA. The exam will be posted on Canvas, and you will have two days to turn in your solutions through Gradescope. You may not discuss the exam with anyone or seek external help.</p>
+<h2 id="final-project" class="relative group">Final project <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#final-project" aria-label="Anchor">#</a></span></h2><p>There will be a final project, which gives students the opportunity to explore topics related to the course that were not covered in class. Students may work individually or in groups of up to four, and the sole deliverable is a written report. Suggested topics will be released two weeks before the end of class, though students are welcome to propose their own with instructor approval. Reports should be written in the style of lecture notes if the topic is well established, or as a short research paper if the topic concerns current work. In either case, the report should state one main result or idea, explain why it is interesting and what implications it has (including potential new research directions), and present its proof—or a sketch thereof if the full argument is too long.</p>
+<h2 id="participation" class="relative group">Participation <span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"><a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#participation" aria-label="Anchor">#</a></span></h2><p>Participation weights 10% in the final grade. Engaging in class, Piazza, and office hours will count toward participation. This includes asking questions (even if you think they are silly!) and pointing out typos or mistakes.</p>
+
+    </section>
+    <footer class="pt-8">
+      
+
+    </footer>
+  </article>
+
+      </main>
+      
+        <div
+          class="pointer-events-none absolute bottom-0 end-0 top-[100vh] w-12"
+          id="to-top"
+          hidden="true"
+        >
+          <a
+            href="#the-top"
+            class="pointer-events-auto sticky top-[calc(100vh-5.5rem)] flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 backdrop-blur hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+            aria-label="Scroll to top"
+            title="Scroll to top"
+          >
+            &uarr;
+          </a>
+        </div>
+      <footer class="py-10 print:hidden">
+  
+  
+  <div class="flex items-center justify-between">
+    <div>
+      
+      
+      
+      
+    </div>
+    <div class="flex flex-row items-center">
+      
+      
+      
+      
+        <div
+          class="me-14 cursor-pointer text-sm text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        >
+          <button id="appearance-switcher-0" type="button" aria-label="appearance switcher">
+            <div
+              class="flex h-12 w-12 items-center justify-center dark:hidden"
+              title="Switch to dark appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+            </div>
+            <div
+              class="hidden h-12 w-12 items-center justify-center dark:flex"
+              title="Switch to light appearance"
+            >
+              <span class="icon relative inline-block px-1 align-text-bottom"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+            </div>
+          </button>
+        </div>
+      
+    </div>
+  </div>
+  
+  
+</footer>
+
+    </div>
+  </body>
+</html>
