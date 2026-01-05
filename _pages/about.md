@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I mathematician from Bogotá
+I mathematician from Bogotá blablabla
 
 [*e-mail*](mailto:gloriapatricia.buriticaborda@agroparistech.fr) 
 
